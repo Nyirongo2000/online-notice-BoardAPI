@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Notice {
 
-    private Long NoticeId;
-    private String NoticeTxt;
+    private Long noticeId;
+    private String noticeTxt;
 
 
 
