@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("api/noticeBoard")
 @RestController
@@ -16,5 +18,10 @@ public class NoticeController {
     public Notice createNotice(@RequestBody Notice notice){
 return noticeServices.createNotice(notice);
     }
+    @GetMapping
+    public List<Notice> getNotice(){
+        return noticeServices.getNotice();
+    }
+    
 
 }
