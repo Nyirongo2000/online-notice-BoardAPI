@@ -9,4 +9,6 @@ public interface NoticeServices {
     Notice createNotice(Notice notice);
 
     public List<Notice> getNotice();
+
+    public boolean deleteNotice(Long id);
 }

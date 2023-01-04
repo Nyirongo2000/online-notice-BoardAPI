@@ -39,4 +39,11 @@ public class NoticeServiceImplementation implements NoticeServices {
                 .collect(Collectors.toList());
         return noticeList;
     }
+
+    @Override
+    public boolean deleteNotice(Long id) {
+        NoticeEntity notice=noticeRepo.findById(id).get();
+        noticeRepo.delete(notice);
+        return true;
+    }
 }
